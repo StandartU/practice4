@@ -36,6 +36,9 @@ class LoginWindow(QWidget):
 
         self.setLayout(layout)
 
+        self.setFixedSize(self.sizeHint())
+
+
     def try_login(self):
         login = self.login_input.text().strip()
         password = self.password_input.text().strip()

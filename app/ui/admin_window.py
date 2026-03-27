@@ -66,6 +66,8 @@ class AdminWindow(QWidget):
         self.selected_user_id = None
         self.load_users()
 
+        self.setFixedSize(self.size())
+
     def load_users(self):
         self.table.setRowCount(0)
         users = self.db.fetchall(

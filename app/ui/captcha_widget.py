@@ -77,6 +77,9 @@ class CaptchaWidget(QWidget):
         self.check_btn.clicked.connect(self.check_captcha)
         layout.addWidget(self.check_btn, 4, 0, 1, 2)
 
+        self.setFixedSize(self.sizeHint())
+
+
     def check_captcha(self):
         user_order = [cell.piece for cell in self.cells]
 
