@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QMessageBox,
-    QLineEdit, QComboBox, QTableWidget, QTableWidgetItem, QLabel
+    QLineEdit, QComboBox, QTableWidget, QTableWidgetItem, QLabel, QAbstractItemView
 )
 from database.db_connector import Database
 
@@ -16,6 +16,7 @@ class AdminWindow(QWidget):
 
         # Таблица пользователей
         self.table = QTableWidget()
+        self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.table.setColumnCount(5)
         self.table.setHorizontalHeaderLabels(["ID", "Логин", "Роль", "Блокирован", "Попытки"])
         self.table.cellClicked.connect(self.on_row_selected)
