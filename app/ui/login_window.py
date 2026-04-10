@@ -84,7 +84,7 @@ class LoginWindow(QWidget):
 
             return
 
-        # успешный вход
+
         self.db.execute("UPDATE users SET attempts = 0 WHERE id = %s", (user.id,))
         QMessageBox.information(self, "Успех", "Вы успешно авторизовались")
 
@@ -93,6 +93,8 @@ class LoginWindow(QWidget):
             self.admin = AdminWindow()
             self.admin.show()
         else:
-            QMessageBox.information(self, "Пользователь", "Добро пожаловать!")
+            from ui.user_window import UserWindow
+            self.user = UserWindow()
+            self.user.show()
 
         self.close()

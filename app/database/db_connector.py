@@ -6,7 +6,7 @@ class Database:
     def __init__(self,
                  host="localhost",
                  port=5432,
-                 database="practice4",
+                 database="postgres",
                  user="postgres",
                  password="postgres"):
         self.host = host

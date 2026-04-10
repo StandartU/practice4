@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QLabel, QPushButton, QGridLayout, QMessageBox
-from PyQt6.QtGui import QPixmap, QDrag, QIcon
-from PyQt6.QtCore import Qt, QMimeData, QByteArray
+from PyQt6.QtGui import QPixmap, QDrag
+from PyQt6.QtCore import Qt, QMimeData
 import random
 
 
